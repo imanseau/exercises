@@ -1,0 +1,257 @@
+/*
+    FILE PURPOSE
+    This file is named sections.css.
+    It controls the visual appearance of sections.html.
+
+    HTML describes the structure of the page.
+    CSS describes how that structure should look.
+
+    This stylesheet gives each section a unique background color, adds padding,
+    and centers the text, as required by the prompt.
+*/
+
+/*
+    NAMED COMMENT: COLOR SCHEME
+    The color scheme uses three soft, distinct background colors for the three
+    main sections.
+
+    About uses a pale warm cream color to feel calm and introductory.
+    Work uses a pale green color to suggest material growth and studio process.
+    Contact uses a pale blue color to feel open, clear, and approachable.
+
+    The header and footer use neutral colors so they do not compete with the
+    three main colored sections.
+*/
+
+/*
+    NAMED COMMENT: INTERACTION BEHAVIOR
+    This page is mostly static, meaning visitors read it rather than clicking
+    buttons or opening menus.
+
+    There are no form fields, JavaScript actions, hover animations, or navigation
+    links in this version.
+
+    The only interaction behavior is normal page scrolling. The three sections
+    are stacked vertically, so the visitor moves from About to Work to Contact
+    by scrolling down the page.
+*/
+
+/*
+    UNIVERSAL SELECTOR
+    The * selector targets every element on the page.
+
+    box-sizing: border-box changes how width and height are calculated.
+    With border-box, padding and borders are included inside an element's total
+    width instead of being added on top of it.
+
+    This makes layout sizing easier for beginners because elements are less
+    likely to accidentally become wider than expected.
+*/
+* {
+    box-sizing: border-box;
+}
+
+/*
+    BODY STYLING
+    The body is the visible page area inside the browser window.
+
+    margin: 0 removes the browser's default white space around the page.
+    Browsers normally add default margin to the body, but removing it allows the
+    colored sections to stretch cleanly from edge to edge.
+
+    font-family chooses the typeface used for the page.
+    Arial is listed first because it is common and easy to read.
+    Helvetica is a similar backup option.
+    sans-serif is the generic fallback if neither Arial nor Helvetica is available.
+
+    color: #222222 sets the main text color to a very dark gray.
+    This is softer than pure black but still easy to read.
+
+    line-height: 1.6 increases the vertical spacing between lines of text.
+    This makes paragraphs more comfortable to read.
+*/
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #222222;
+    line-height: 1.6;
+}
+
+/*
+    PAGE HEADER STYLING
+    The .page-header selector targets the element with class="page-header".
+
+    background-color: #1f1f1f creates a dark charcoal background.
+    The charcoal color gives the top of the page visual weight without using
+    harsh pure black.
+
+    color: #ffffff makes the header text white so it contrasts clearly against
+    the dark background.
+
+    padding: 40px 20px adds space inside the header.
+    The first value, 40px, applies to the top and bottom.
+    The second value, 20px, applies to the left and right.
+
+    text-align: center centers the heading and paragraph horizontally.
+*/
+.page-header {
+    background-color: #1f1f1f;
+    color: #ffffff;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+/*
+    MAIN HEADING STYLING
+    This selector targets the <h1> inside the page header.
+
+    margin: 0 0 10px removes default top margin and adds a small space below.
+    This keeps the heading close to the paragraph without letting it feel cramped.
+
+    font-size: 2rem makes the heading larger than normal body text.
+    rem units scale based on the root font size, which makes them more flexible
+    than fixed pixel sizes.
+*/
+.page-header h1 {
+    margin: 0 0 10px;
+    font-size: 2rem;
+}
+
+/*
+    HEADER PARAGRAPH STYLING
+    This selector targets the <p> inside the page header.
+
+    margin: 0 removes the browser's default paragraph margin.
+    The header already has padding, so extra margin is not needed here.
+*/
+.page-header p {
+    margin: 0;
+}
+
+/*
+    SHARED SECTION STYLING
+    The .content-section class is used on all three main sections.
+    This avoids repeating the same CSS three times.
+
+    padding: 60px 20px adds generous breathing room inside every section.
+    The sections feel like clear content blocks instead of cramped strips.
+
+    text-align: center centers all text inside each section.
+    This directly satisfies the requirement to center the text.
+
+    min-height: 240px gives each section enough vertical space to feel substantial.
+    Without this, short placeholder text could make the sections look too thin.
+
+    display: flex turns each section into a flexible layout container.
+    flex-direction: column stacks the heading and paragraph vertically.
+    justify-content: center centers the content vertically inside the section.
+    align-items: center centers the content horizontally inside the section.
+*/
+.content-section {
+    padding: 60px 20px;
+    text-align: center;
+    min-height: 240px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/*
+    SECTION HEADING STYLING
+    This selector targets all <h2> elements inside the main content sections.
+
+    margin: 0 0 15px removes default top margin and creates space below the heading.
+    The 15px bottom margin separates each heading from its paragraph.
+
+    font-size: 1.75rem makes section headings visually important but smaller
+    than the main page title.
+*/
+.content-section h2 {
+    margin: 0 0 15px;
+    font-size: 1.75rem;
+}
+
+/*
+    SECTION PARAGRAPH STYLING
+    This selector targets paragraphs inside the colored content sections.
+
+    max-width: 700px prevents the text line from becoming too wide.
+    Wide lines are harder to read because the eye has to travel too far.
+
+    margin: 0 removes the default paragraph margin because spacing is already
+    controlled by the heading margin and section padding.
+*/
+.content-section p {
+    max-width: 700px;
+    margin: 0;
+}
+
+/*
+    ABOUT SECTION BACKGROUND COLOR
+    The .about-section class targets only the About section.
+
+    background-color: #f7ead7 creates a pale warm cream color.
+    This color is gentle and welcoming, which works well for an introductory
+    section that explains who or what the page is about.
+*/
+.about-section {
+    background-color: #f7ead7;
+}
+
+/*
+    WORK SECTION BACKGROUND COLOR
+    The .work-section class targets only the Work section.
+
+    background-color: #dcefdc creates a soft pale green color.
+    Green often suggests growth, making, experimentation, and organic process,
+    which fits a section about studio work and materials.
+*/
+.work-section {
+    background-color: #dcefdc;
+}
+
+/*
+    CONTACT SECTION BACKGROUND COLOR
+    The .contact-section class targets only the Contact section.
+
+    background-color: #dce9f5 creates a pale blue color.
+    Blue often feels calm and clear, which makes it a good choice for contact
+    information because the section should feel open and easy to approach.
+*/
+.contact-section {
+    background-color: #dce9f5;
+}
+
+/*
+    PAGE FOOTER STYLING
+    The .page-footer selector targets the footer at the bottom of the page.
+
+    background-color: #f2f2f2 creates a light neutral gray.
+    This separates the footer from the colored sections without making it too loud.
+
+    padding: 20px adds space inside the footer on all sides.
+
+    text-align: center centers the footer text, matching the centered design
+    used throughout the rest of the page.
+
+    font-size: 0.9rem makes the footer text slightly smaller than the main text.
+    This signals that the footer is secondary information.
+*/
+.page-footer {
+    background-color: #f2f2f2;
+    padding: 20px;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+/*
+    FOOTER PARAGRAPH STYLING
+    This selector targets the paragraph inside the footer.
+
+    margin: 0 removes default paragraph spacing so the footer's padding controls
+    the spacing cleanly.
+*/
+.page-footer p {
+    margin: 0;
+}

@@ -1,0 +1,111 @@
+<!--
+FULL ORIGINAL PROMPT FROM THE USER:
+
+Create a complete HTML5 page named basic.html. Add a centered <h1> heading and a short <p> paragraph. Link to an external CSS file (css/basic.css) that sets the background color to white and the text color to black. Write neurotically detailed comments in all files; explain every tag, class, style rule, and color value as if you're walking a complete beginner through the reasoning behind each choice. Be sure to include named comments describing your color scheme and interaction behavior. Include this full prompt as a comment at the top of the HTML file. Use placeholder content about an art topic of your choice to complete the page.
+-->
+
+<!--
+DOCUMENT TYPE COMMENT:
+The line below is the HTML5 doctype declaration.
+It tells the browser, "Please interpret this document using modern HTML5 rules."
+Without this line, some browsers may fall back into older rendering modes,
+which can make layouts behave in strange or inconsistent ways.
+-->
+<!DOCTYPE html>
+
+<!--
+HTML ROOT ELEMENT COMMENT:
+The <html> element wraps every visible and invisible part of the web page.
+The lang="en" attribute tells browsers, search engines, and screen readers
+that the primary language of this document is English.
+This is useful for accessibility, pronunciation, translation tools, and indexing.
+-->
+<html lang="en">
+
+<!--
+HEAD SECTION COMMENT:
+The <head> element contains information about the page rather than the page content itself.
+Nothing inside <head> is meant to appear directly as the main visible content in the browser window.
+This is where we put metadata, the page title, and links to external files such as CSS.
+-->
+<head>
+
+    <!--
+    CHARACTER ENCODING COMMENT:
+    The <meta charset="UTF-8"> tag tells the browser which character encoding to use.
+    UTF-8 is the modern standard because it supports English letters, punctuation,
+    accented characters, symbols, and many writing systems from around the world.
+    This helps prevent weird replacement symbols from appearing in the text.
+    -->
+    <meta charset="UTF-8">
+
+    <!--
+    RESPONSIVE VIEWPORT COMMENT:
+    This <meta> tag tells the browser how to scale the page on phones, tablets, and desktops.
+    width=device-width means the page should match the actual width of the screen.
+    initial-scale=1.0 means the page starts at normal zoom instead of being zoomed in or out.
+    This is a basic requirement for pages that should look reasonable on modern devices.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+    PAGE TITLE COMMENT:
+    The <title> element sets the text shown in the browser tab.
+    It is not the same as the visible <h1> heading on the page.
+    This title is also used by bookmarks and sometimes by search results.
+    -->
+    <title>Basic Art Page</title>
+
+    <!--
+    EXTERNAL CSS LINK COMMENT:
+    The <link> tag below connects this HTML file to an external stylesheet.
+    rel="stylesheet" tells the browser that the linked file contains CSS rules.
+    href="css/basic.css" points to a file named basic.css inside a folder named css.
+    Keeping CSS in a separate file is a common best practice because it separates
+    structure/content, which belong in HTML, from visual presentation, which belongs in CSS.
+    -->
+    <link rel="stylesheet" href="css/basic.css">
+
+</head>
+
+<!--
+BODY SECTION COMMENT:
+The <body> element contains the actual visible content of the web page.
+Headings, paragraphs, images, links, buttons, and other page elements normally live here.
+For this basic page, we only need one heading and one paragraph.
+-->
+<body>
+
+    <!--
+    MAIN CONTENT WRAPPER COMMENT:
+    The <main> element identifies the primary content of the page.
+    This helps screen readers and search engines understand what the central page content is.
+    We are using a class named "page-content" so the CSS file can target this section
+    if we want to style the main content area specifically.
+    -->
+    <main class="page-content">
+
+        <!--
+        CENTERED HEADING COMMENT:
+        The <h1> element is the most important heading on the page.
+        A page should usually have one clear <h1> that describes the main subject.
+        This heading is centered using a CSS rule in css/basic.css, not with old HTML attributes.
+        Separating the centering into CSS keeps the HTML focused on meaning and structure.
+        -->
+        <h1>Looking Closely at Sculpture</h1>
+
+        <!--
+        SHORT PARAGRAPH COMMENT:
+        The <p> element represents a paragraph of text.
+        This placeholder paragraph introduces an art topic: sculpture and material attention.
+        It is intentionally short because the user requested a short paragraph, not a full essay.
+        -->
+        <p>
+            Sculpture asks viewers to notice how material, weight, surface, and space work together to create meaning.
+        </p>
+
+    </main>
+
+</body>
+
+</html>

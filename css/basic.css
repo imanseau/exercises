@@ -1,0 +1,194 @@
+/*
+FILE PURPOSE COMMENT:
+This file is named basic.css and lives inside a folder named css.
+The HTML page links to it using the path css/basic.css.
+This stylesheet controls the visual appearance of the HTML page.
+*/
+
+/*
+==============================
+COLOR SCHEME: WHITE AND BLACK
+==============================
+This named comment describes the color scheme as requested.
+
+The page uses a deliberately simple high-contrast color scheme:
+- White background
+- Black text
+
+White is represented in CSS as "white" or as the hex value #ffffff.
+Black is represented in CSS as "black" or as the hex value #000000.
+
+Using named colors here keeps the file readable for beginners.
+The contrast between white and black is strong, familiar, and easy to read.
+*/
+
+/*
+================================
+INTERACTION BEHAVIOR: STATIC PAGE
+================================
+This named comment describes the interaction behavior as requested.
+
+This page has no buttons, links, forms, menus, animations, hover effects, or JavaScript.
+That means the page is static: the user reads it, but does not interact with it.
+Because there are no interactive elements, there are no cursor changes, click states,
+keyboard focus styles, form states, or animation timing rules to define.
+*/
+
+/*
+UNIVERSAL BOX MODEL COMMENT:
+The asterisk selector (*) targets every element on the page.
+box-sizing: border-box changes how browsers calculate element width and height.
+With border-box, padding and borders are included inside the declared size of an element.
+This makes layout behavior easier for beginners because boxes are less likely to become
+unexpectedly wider than intended.
+*/
+* {
+    box-sizing: border-box;
+}
+
+/*
+BODY STYLE COMMENT:
+The body selector styles the entire visible page area.
+The <body> element is the parent container for all visible content in basic.html.
+*/
+body {
+    /*
+    BACKGROUND COLOR COMMENT:
+    background-color controls the color behind all page content.
+    The value white means the browser paints the page background white.
+    White is a plain, neutral background that does not compete with the text.
+    It is also the exact background color requested in the prompt.
+    */
+    background-color: white;
+
+    /*
+    TEXT COLOR COMMENT:
+    color controls the default text color inside the body.
+    The value black means paragraph text and heading text will appear black
+    unless a more specific CSS rule overrides it later.
+    Black text on a white background is the classic high-contrast reading setup.
+    It is also the exact text color requested in the prompt.
+    */
+    color: black;
+
+    /*
+    FONT FAMILY COMMENT:
+    font-family chooses the typeface used for the page text.
+    Arial is listed first because it is common and easy to read.
+    Helvetica is listed as a similar fallback.
+    sans-serif is the generic fallback category, meaning the browser will use
+    any available sans-serif font if Arial or Helvetica are unavailable.
+    */
+    font-family: Arial, Helvetica, sans-serif;
+
+    /*
+    MARGIN COMMENT:
+    Browsers add default margin around the body unless we change it.
+    Setting margin to 0 removes that automatic outer gap.
+    This gives us predictable control over spacing.
+    */
+    margin: 0;
+
+    /*
+    LINE HEIGHT COMMENT:
+    line-height controls the vertical space between lines of text.
+    A value of 1.5 means each line is one and a half times the font size.
+    This improves readability, especially for paragraph text.
+    */
+    line-height: 1.5;
+}
+
+/*
+PAGE CONTENT CLASS COMMENT:
+The dot before page-content means this rule targets elements with class="page-content".
+In basic.html, the <main> element uses this class.
+A class is a reusable label that lets CSS style specific parts of the page.
+*/
+.page-content {
+    /*
+    MAX WIDTH COMMENT:
+    max-width limits how wide the main content area can become.
+    700px means the content will not stretch endlessly across very wide screens.
+    This keeps the heading and paragraph comfortable to read on large monitors.
+    */
+    max-width: 700px;
+
+    /*
+    MARGIN COMMENT:
+    margin: 0 auto uses two values.
+    The first value, 0, means no vertical margin is added above or below this element.
+    The second value, auto, tells the browser to distribute left and right space evenly.
+    This horizontally centers the main content block on the page.
+    */
+    margin: 0 auto;
+
+    /*
+    PADDING COMMENT:
+    padding creates space inside the content area.
+    2rem adds breathing room so the text does not touch the edges of the viewport.
+    rem is a relative unit based on the root font size, which makes it scalable.
+    */
+    padding: 2rem;
+}
+
+/*
+HEADING STYLE COMMENT:
+The h1 selector targets the main heading element in the HTML.
+Because the prompt specifically asks for a centered <h1>, the centering rule is placed here.
+*/
+h1 {
+    /*
+    TEXT ALIGNMENT COMMENT:
+    text-align controls how inline text is aligned within its container.
+    center places the heading text in the horizontal center of the available content area.
+    This satisfies the instruction to add a centered <h1> heading.
+    */
+    text-align: center;
+
+    /*
+    MARGIN TOP COMMENT:
+    margin-top controls the space above the heading.
+    Setting it to 0 prevents extra browser-default spacing from pushing the heading lower
+    than expected at the top of the content area.
+    */
+    margin-top: 0;
+
+    /*
+    MARGIN BOTTOM COMMENT:
+    margin-bottom controls the space below the heading.
+    1rem creates a modest gap between the heading and the paragraph.
+    This makes the page easier to scan without adding unnecessary decoration.
+    */
+    margin-bottom: 1rem;
+}
+
+/*
+PARAGRAPH STYLE COMMENT:
+The p selector targets paragraph elements.
+There is only one paragraph in this page, but the rule would apply to all <p> elements
+if more paragraphs were added later.
+*/
+p {
+    /*
+    FONT SIZE COMMENT:
+    font-size controls the size of the paragraph text.
+    1rem means the paragraph uses the browser's normal base text size.
+    This is a safe beginner-friendly choice because it respects user/browser defaults.
+    */
+    font-size: 1rem;
+
+    /*
+    MARGIN TOP COMMENT:
+    margin-top controls the space above the paragraph.
+    Setting it to 0 avoids stacking extra space against the heading's bottom margin.
+    */
+    margin-top: 0;
+
+    /*
+    TEXT ALIGNMENT COMMENT:
+    text-align: left keeps the paragraph aligned to the left.
+    Even though the heading is centered, left-aligned paragraph text is usually easier
+    to read because each line begins from the same predictable edge.
+    */
+    text-align: left;
+}

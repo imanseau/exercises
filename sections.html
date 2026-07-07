@@ -1,0 +1,205 @@
+<!--
+Create a complete HTML5 page named sections.html with three stacked <section> blocks titled About, Work, and Contact. Link to an external CSS file (css/sections.css) that assigns each section a unique background color, adds padding, and centers the text. Write neurotically detailed comments in all files; explain every tag, class, style rule, and color value as if you're walking a complete beginner through the reasoning behind each choice. Be sure to include named comments describing your color scheme and interaction behavior. Include this full prompt as a comment at the top of the HTML file. Use placeholder content about an art topic of your choice to complete the page.
+-->
+
+<!--
+    DOCUMENT TYPE DECLARATION
+    The line below tells the browser that this document is written using HTML5.
+    HTML5 is the modern standard version of HTML, which is the language used
+    to describe the structure and meaning of web page content.
+-->
+<!DOCTYPE html>
+
+<!--
+    ROOT HTML ELEMENT
+    The <html> element wraps the entire web page.
+    The lang="en" attribute tells browsers, screen readers, and search engines
+    that the primary language of this page is English.
+-->
+<html lang="en">
+
+<!--
+    HEAD SECTION
+    The <head> element contains information ABOUT the page.
+    This information is usually not displayed directly on the page itself.
+    It includes settings, links to external files, and the page title.
+-->
+<head>
+    <!--
+        CHARACTER ENCODING
+        The <meta charset="UTF-8"> tag tells the browser to use UTF-8 encoding.
+        UTF-8 supports English letters, punctuation, symbols, and many languages.
+        This helps prevent strange broken characters from appearing on the page.
+    -->
+    <meta charset="UTF-8">
+
+    <!--
+        RESPONSIVE VIEWPORT SETTING
+        This <meta> tag helps the page look correct on phones, tablets, laptops,
+        and desktop screens.
+
+        width=device-width means the page width should match the width of the
+        device screen.
+
+        initial-scale=1.0 means the page should start at normal zoom level
+        instead of being zoomed in or zoomed out.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+        PAGE TITLE
+        The <title> element controls the text shown in the browser tab.
+        It is also used by bookmarks and can appear in search engine results.
+    -->
+    <title>Sections: About, Work, and Contact</title>
+
+    <!--
+        EXTERNAL CSS LINK
+        The <link> tag connects this HTML file to an external CSS file.
+        CSS controls the visual design of the page, such as colors, spacing,
+        alignment, and typography.
+
+        rel="stylesheet" tells the browser that the linked file is a stylesheet.
+        href="css/sections.css" tells the browser where to find the stylesheet.
+        In this case, the CSS file is inside a folder named css.
+    -->
+    <link rel="stylesheet" href="css/sections.css">
+</head>
+
+<!--
+    BODY SECTION
+    The <body> element contains everything the visitor actually sees on the page.
+    In this page, the body contains three stacked <section> blocks:
+    About, Work, and Contact.
+-->
+<body>
+
+    <!--
+        PAGE HEADER
+        The <header> element is used for introductory content.
+        Here it introduces the page as a small art-themed landing page.
+    -->
+    <header class="page-header">
+        <!--
+            MAIN HEADING
+            The <h1> element is the most important heading on the page.
+            A page should usually have one main <h1> so the structure is clear.
+        -->
+        <h1>Studio Notes: A Small Art Practice</h1>
+
+        <!--
+            INTRODUCTORY PARAGRAPH
+            The <p> element creates a paragraph of text.
+            This sentence gives the visitor a quick idea of what the page is about.
+        -->
+        <p>A simple three-section page about process, materials, and connection.</p>
+    </header>
+
+    <!--
+        MAIN CONTENT AREA
+        The <main> element identifies the primary content of the page.
+        This helps screen readers and search engines understand where the main
+        material begins.
+    -->
+    <main>
+
+        <!--
+            ABOUT SECTION
+            The <section> element groups related content together.
+            This first section explains the placeholder artist or studio idea.
+
+            The class names "content-section" and "about-section" are used by CSS.
+            "content-section" gives all sections shared styling.
+            "about-section" gives this specific section its unique background color.
+        -->
+        <section class="content-section about-section">
+            <!--
+                SECTION HEADING
+                The <h2> element creates a second-level heading.
+                Since this heading belongs under the main page title, <h2> is
+                the correct level here.
+            -->
+            <h2>About</h2>
+
+            <!--
+                SECTION PARAGRAPH
+                This paragraph uses placeholder content about art.
+                Placeholder content is temporary text used while designing a page.
+            -->
+            <p>
+                This studio explores sculpture as a conversation between gravity,
+                memory, and material. Clay, wood, metal, and found objects are used
+                to build quiet forms that suggest pressure, repair, and transformation.
+            </p>
+        </section>
+
+        <!--
+            WORK SECTION
+            This second section describes the type of artwork being made.
+            It is stacked below the About section because normal block elements
+            naturally flow from top to bottom in the order they appear in HTML.
+        -->
+        <section class="content-section work-section">
+            <!--
+                WORK HEADING
+                This <h2> labels the section so visitors know they are now reading
+                about the artwork itself.
+            -->
+            <h2>Work</h2>
+
+            <!--
+                WORK DESCRIPTION
+                This paragraph gives example content about an art practice.
+                The text is centered by CSS, not by HTML, because visual styling
+                belongs in the stylesheet.
+            -->
+            <p>
+                Current work focuses on repeated vessel forms, surface residue,
+                and the way objects can hold evidence of process. Each piece is
+                treated as both an individual object and part of a larger field.
+            </p>
+        </section>
+
+        <!--
+            CONTACT SECTION
+            This third section gives placeholder contact information.
+            It is separated into its own section because contact information is
+            a distinct topic from the artist statement and artwork description.
+        -->
+        <section class="content-section contact-section">
+            <!--
+                CONTACT HEADING
+                This <h2> clearly marks the final section of the page.
+            -->
+            <h2>Contact</h2>
+
+            <!--
+                CONTACT PARAGRAPH
+                This paragraph is simple placeholder text.
+                A real version of this page could replace it with an email address,
+                contact form, studio location, or social media link.
+            -->
+            <p>
+                For studio visits, exhibition questions, or material conversations,
+                reach out through the artist's preferred contact channel.
+            </p>
+        </section>
+
+    </main>
+
+    <!--
+        PAGE FOOTER
+        The <footer> element contains closing or supplemental information.
+        This small footer reinforces that the page is a simple HTML/CSS example.
+    -->
+    <footer class="page-footer">
+        <!--
+            FOOTER TEXT
+            This paragraph is intentionally short because footers should not
+            distract from the main sections above.
+        -->
+        <p>Built as a beginner-friendly HTML5 and CSS section layout.</p>
+    </footer>
+
+</body>
+</html>
